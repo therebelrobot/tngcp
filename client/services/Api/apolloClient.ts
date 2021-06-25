@@ -1,6 +1,6 @@
-// from https://github.com/vercel/next.js/blob/master/examples/with-apollo/lib/apolloClient.js
 import {useMemo} from 'react'
 
+// from https://github.com/vercel/next.js/blob/master/examples/with-apollo/lib/apolloClient.js
 import {ApolloClient, HttpLink, InMemoryCache} from '@apollo/client'
 import {concatPagination} from '@apollo/client/utilities'
 
@@ -10,9 +10,9 @@ function createApolloClient() {
   return new ApolloClient({
     ssrMode: typeof window === 'undefined',
     link: new HttpLink({
-      uri: `http${process.env.SSL === 'true' ? 's' : ''}://${process.env.HOST}${
+      uri: `http${process.env.SSL === 'true' ? 's' : ''}://${process.env.HOSTNAME}${
         process.env.PORT !== '80' ? `:${process.env.PORT}` : ''
-      }/api/data`, // Server URL (must be absolute)
+      }/api/graphql`, // Server URL (must be absolute)
       credentials: 'same-origin', // Additional fetch() options like `credentials` or `headers`
     }),
     cache: new InMemoryCache({

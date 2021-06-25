@@ -1,7 +1,7 @@
 export const resolvers = {
   Query: {
-    users(parent, args, {db}) {
-      return [{firstName: 'Nextjs'}]
+    greetingLocation(parent, args, {db}) {
+      return {name: 'The Moon', geolocation: '123456, 123456'}
     },
   },
 }

@@ -4,7 +4,7 @@ module.exports = {
   port: process.env.PORT,
   poweredByHeader: false,
   env: {
-    HOST: process.env.HOST,
+    HOSTNAME: process.env.HOSTNAME,
     PORT: process.env.PORT,
     SSL: process.env.SSL,
   },
